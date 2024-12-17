@@ -11,7 +11,8 @@ const Login = () => {
     const [password, setPassword] = useState()
     const [loading, setLoading] = useState(false)
     const [errMsg, setErrMsg] = useState("")
-    const api = import.meta.env.VITE.SERVER_URL
+    const api = import.meta.env.VITE_SERVER_URL
+    console.log(api)
 
     const navigate = useNavigate()
 

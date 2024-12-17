@@ -17,7 +17,7 @@ const SignUp = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [errMsg, setErrMsg] = useState("")
-    const api = import.meta.env.VITE.SERVER_URL
+    const api = import.meta.env.VITE_SERVER_URL
 
     const handleSubmit = async (e) => {
         e.preventDefault()
