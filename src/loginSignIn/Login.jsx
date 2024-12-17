@@ -11,6 +11,7 @@ const Login = () => {
     const [password, setPassword] = useState()
     const [loading, setLoading] = useState(false)
     const [errMsg, setErrMsg] = useState("")
+    const api = import.meta.env.VITE.SERVER_URL
 
     const navigate = useNavigate()
 
@@ -18,7 +19,7 @@ const Login = () => {
         e.preventDefault()
         setLoading(true)
         try {
-            await axios.post('http://localhost:9000/login', { username: name, password })
+            await axios.post(`${api}/login`, { username: name, password })
             navigate("/tasks")
         } catch (e) {
             console.log(e)
