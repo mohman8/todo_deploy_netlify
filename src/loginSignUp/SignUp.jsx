@@ -17,12 +17,13 @@ const SignUp = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [errMsg, setErrMsg] = useState("")
+    const api = import.meta.env.VITE.SERVER_URL
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         setLoading(true)
         try {
-            await axios.post('http://localhost:9000/register', { username: name, email, password })
+            await axios.post(`${api}/register`, { username: name, email, password })
             navigate("/")
         } catch (e) {
             console.log(e)
