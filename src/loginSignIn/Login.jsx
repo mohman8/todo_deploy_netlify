@@ -18,7 +18,7 @@ const Login = () => {
         e.preventDefault()
         setLoading(true)
         try {
-            await axios.post('http://localhost:9000/login', { username: name, password })
+            await axios.post(`${process.env.REACT_APP_URL}/login`, { username: name, password })
             navigate("/tasks")
         } catch (e) {
             console.log(e)

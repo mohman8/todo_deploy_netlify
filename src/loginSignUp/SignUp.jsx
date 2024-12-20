@@ -22,7 +22,7 @@ const SignUp = () => {
         e.preventDefault()
         setLoading(true)
         try {
-            await axios.post('http://localhost:9000/register', { username: name, email, password })
+            await axios.post(`${process.env.REACT_APP_URL}/register`, { username: name, email, password })
             navigate("/")
         } catch (e) {
             console.log(e)

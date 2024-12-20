@@ -54,7 +54,7 @@ h1 {
 form {
   margin-bottom: 20px;
 }
-input[type="text"] {
+input {
   padding: 10px;
   margin-right: 10px;
   width: 300px;
