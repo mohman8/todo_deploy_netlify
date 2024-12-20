@@ -11,6 +11,8 @@ const Login = () => {
     const [password, setPassword] = useState()
     const [loading, setLoading] = useState(false)
     const [errMsg, setErrMsg] = useState("")
+    const api = import.meta.env.VITE_SERVER_URL
+    console.log(api)
 
     const navigate = useNavigate()
 
@@ -18,7 +20,11 @@ const Login = () => {
         e.preventDefault()
         setLoading(true)
         try {
+<<<<<<< HEAD
             await axios.post(`${process.env.REACT_APP_URL}/login`, { username: name, password })
+=======
+            await axios.post(`${api}/login`, { username: name, password })
+>>>>>>> a74d889bd82dc6378b5d6a6977fe4c875e4321df
             navigate("/tasks")
         } catch (e) {
             console.log(e)
