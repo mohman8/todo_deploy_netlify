@@ -23,11 +23,7 @@ const SignUp = () => {
         e.preventDefault()
         setLoading(true)
         try {
-<<<<<<< HEAD
             await axios.post(`${process.env.REACT_APP_URL}/register`, { username: name, email, password })
-=======
-            await axios.post(`${api}/register`, { username: name, email, password })
->>>>>>> a74d889bd82dc6378b5d6a6977fe4c875e4321df
             navigate("/")
         } catch (e) {
             console.log(e)
