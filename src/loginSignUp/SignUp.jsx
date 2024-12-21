@@ -22,7 +22,7 @@ const SignUp = () => {
         e.preventDefault()
         setLoading(true)
         try {
-            await axios.post(`${process.env.REACT_APP_URL}/register`, { username: name, email, password })
+            await axios.post(`https://todo-deploy-backend-ahvk.onrender.com/register`, { username: name, email, password })
             navigate("/")
         } catch (e) {
             console.log(e)

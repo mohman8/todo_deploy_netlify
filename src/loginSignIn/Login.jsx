@@ -20,7 +20,7 @@ const Login = () => {
         e.preventDefault()
         setLoading(true)
         try {
-            await axios.post(`${process.env.REACT_APP_URL}/login`, { username: name, password })
+            await axios.post(`https://todo-deploy-backend-ahvk.onrender.com/login`, { username: name, password })
             navigate("/tasks")
         } catch (e) {
             console.log(e)
